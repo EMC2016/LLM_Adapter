@@ -1,4 +1,4 @@
 readings/
 env/
 data/
-test/
+*.bin
