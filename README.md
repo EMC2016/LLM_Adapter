@@ -32,3 +32,22 @@ pip install adapters
  
 ### On Docker 
 
+
+## Train Adapter
+
+```bash
+python roberta_seqbn.py \
+    --model_name_or_path roberta-base \
+    --train_file data/rct-sample/train.jsonl \
+    --validation_file data/rct-sample/test.jsonl \
+    --per_device_train_batch_size 8 \
+    --per_device_eval_batch_size 8 \
+    --do_train \
+    --do_eval \
+    --output_dir ./test/ \
+    --train_adapter \
+    --adapter_config seq_bn \
+    --overwrite_output_dir \
+    --line_by_line 
+```
+
